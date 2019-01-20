@@ -1,6 +1,7 @@
 ---
 layout: article
 title: About Me
+author: chunyi_hsiao
 permalink: /about/
 ---
 
