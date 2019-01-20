@@ -11,4 +11,4 @@ I'm Chun-Yi Hsiao, currently doing my master degree in [Waseda University](https
 - **Data Scientist** 
 - **Machine Learning Engineer**
 
-such positions, please feel free contace me, my CV just down thereeeee 👇🏿👇🏿👇🏿
+such positions, please feel free contace me, my CV just down there 👇🏿👇🏿👇🏿
