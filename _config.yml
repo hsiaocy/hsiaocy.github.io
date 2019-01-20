@@ -1,8 +1,8 @@
 # Site settings
-title: "HSIAO CHUNYI"
+title: HSIAO CHUNYI
 email: hsiaocy@fuji.waseda.jp
-description: "Hello world!" # this means to ignore newlines until "baseurl:" Hello world.
-
+description: > # "Hello world!" # this means to ignore newlines until "baseurl:" Hello world.
+  Hellooooooooooooo!
 
 
 # Link settings
@@ -60,14 +60,10 @@ gems:
 
 # Site owner
 owner:
-  name:
-  email:
-  twitter:
-  google:
-    ad-client:
-    ad-slot:
-  bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
+  name: hsiaocy
+  email: hsiaocy@fuji.waseda.jp
+  bio: yolo
+  avatar: bio-IMG_5343.jpg # 160x160 px image for author byline
   disqus-shortname:
 
 
