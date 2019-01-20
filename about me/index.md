@@ -2,6 +2,7 @@
 layout: article
 title: About Me
 author: chunyi_hsiao
+date: 2019-01-20
 permalink: /about/
 ---
 
