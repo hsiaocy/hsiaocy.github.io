@@ -1,6 +1,16 @@
 # Site navigation links
 
-- title: 
-  url:
-  excerpt:
-  image:
+- title: About Me
+  url: /about/
+  excerpt: "Yes it's me."
+  image: IMG_5343.jpg
+
+# - title: Life
+  # url: /life/
+  # excerpt: "Things came to my life."
+  # image: Negative0-02-34A(1).jpg
+
+- title: Notes
+  url: /notes/
+  excerpt: "Things I’ve designed, illustrated, developed, coded, and whatever."
+  image: Negative0-25-22A(1).jpg
