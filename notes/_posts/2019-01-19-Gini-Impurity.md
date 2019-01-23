@@ -4,7 +4,7 @@ image:
 
 layout: article
 title: Gini Impurity
-date: 2019-01-19
+date: 2019-01-20
 categories: notes
 author: chunyi_hsiao
 tags: [Decision Tree, Gini Impurity Index]
@@ -26,4 +26,4 @@ To translate that quote in English, he declared some important points:
 - Purpose is to obtain the impurity as small as possible covered all nodes.
 
 ### *TODO*
-- Implement the code.
+- Write in detail.
