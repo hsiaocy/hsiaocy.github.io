@@ -1,12 +1,9 @@
-# Skinny Bones Jekyll Starter
+# hsiaocy.github.io
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+Hi! This is my [github pages](https://hsiaocy.github.io) where I will continuously upload somthing there. 
 
-I'm currently using a variation of it on my personal website [Made Mistakes](http://mademistakes.com) with some modifications. To learn more about how to use the theme and install it check out the [Skinny Bones demo](http://mmistakes.github.io/skinny-bones-jekyll/) (*work in progress*).
+Also, the frame is designed by [Made Mistakes](http://mademistakes.com), visit his [website](http://mmistakes.github.io/skinny-bones-jekyll/) for more!
 
-![screenshot of Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/images/skinny-bones-theme-feature.jpg)
-
----
 
 ## Notable Features
 
