@@ -1,6 +1,6 @@
 # hsiaocy.github.io
 
-Hi! This is my [github pages](https://hsiaocy.github.io) where I will continuously upload somthing there. 
+Hi there! This is my [github pages](https://hsiaocy.github.io) where I will continuously upload somthing there. 
 
 Also, the frame is designed by [Made Mistakes](http://mademistakes.com), visit his [website](http://mmistakes.github.io/skinny-bones-jekyll/) for more!
 
