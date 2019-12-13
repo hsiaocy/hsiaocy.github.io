@@ -2,13 +2,19 @@
 layout: archive
 description: Welcome
 ---
-<img style="float:right; object-fit: cover; margin: 1px 19px" width="512" height="256" src="/../images/osakadouble.jpg" alt="Profile">
+<img style="float:right; object-fit: cover; margin: 1px 19px" width="484" height="321" src="/../images/osakadouble.jpg" alt="Profile">
 
-Hello world!
----
-I'm Chun-Yi Hsiao, currently doing my master degree in [Waseda University](https://www.waseda.jp/top/en), also I'm seeking for the opportunity in
-- **Quantitative Trading**
+
+<h2>Welcome you being here!</h2>
+
+<p>I'm Chunyi Hsiao, a <b>film photography</b> lover and 
+	an <b>engineer</b> too.</p>
+
+<p> I have done a reasearch in 
+	<a href="https://www.waseda.jp/top/en">Waseda University</a>
+	and interested in
+</p>
+
 - **Data Scientist** 
+- **Quantitative Trading**
 - **Machine Learning Engineer**
-
-such positions, please feel free contace me, my CV just down there 👇🏿👇🏿👇🏿
