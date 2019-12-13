@@ -5,7 +5,7 @@ description: Welcome
 <img style="float:right; object-fit: cover; margin: 1px 19px" width="484" height="321" src="/../images/osakadouble.jpg" alt="Profile">
 
 
-<h2>Welcome you being here!</h2>
+<h2>Welcome you here!</h2>
 
 <p>I'm Chunyi Hsiao, a <b>film photography</b> lover and 
 	an <b>engineer</b> too.</p>
