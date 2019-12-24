@@ -15,7 +15,7 @@ I have more than 3 years program experience in Python, Matlab, C to deal with da
 
 So far I'm serving the military obligation in my homeland Taiwan and fullfilling before 17th Feburary 2020, and open to hear about any job opportunity. 
 
-To know more, please refer to [my resume](https://drive.google.com/open?id=1U7fObkwSTS4kFpyOVVaEKLubN0f4Xi_k)
+To know more, please refer to [my resume](https://drive.google.com/open?id=1GU_z95pbQZ8yv7I2rnTpNqWRQuAAMzoQ)
 
 
 ![Diagram](/../images/IMG_5343.jpg){:width="720"}  
