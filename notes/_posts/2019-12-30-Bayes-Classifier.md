@@ -13,8 +13,11 @@ share: true
 ---
 test:
 
-$$ d_{2}(I_{1}, I_{2}) = \sqrt{\sum_{p}(I_{1}^{p} - I_{2}^{p})^{2}} $$
+$$
+d_{2}(I_{1}, I_{2}) = \sqrt{\sum_{p}(I_{1}^{p} - I_{2}^{p})^{2}}
+$$
 
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
 In order to derive the concept of Bayes classifier step by step and learn it. Here keeps a note.
