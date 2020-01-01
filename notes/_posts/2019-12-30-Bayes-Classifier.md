@@ -12,7 +12,7 @@ share: true
 
 ---
 
-<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
 In order to derive the concept of Bayes classifier step by step and learn it. Here keeps a note.
@@ -96,9 +96,9 @@ Here we know:\\
 \\(P(x\|c)\\) is class-conditional probability or likelihood. \\
 \\(P(x)\\) is evidence.
 
-Due to prior probability \\(P(c)\\) is how frequent the class occurred and Likelihood \\(P(x\|c)\\) involves with joint probability of all samples \\(x\\). We usually use MLE(Maximum Likelihood Extimation) to estimate 
+Due to prior probability \\(P(c)\\) is how frequent the class occurred and Likelihood \\(P(x\|c)\\) involves with joint probability of all samples \\(x\\) that usually be estimated by using MLE(Maximum Likelihood Extimation).
 
- thus, the goal of bayes classifier is to maximize likelihood \\(P(x\|c)\\).
+Thus, the goal of bayes classifier is to maximize likelihood \\(P(x\|c)\\), and MLE is another chapter.
 
 ***Reference***\\
 机器学习-周志华\\
