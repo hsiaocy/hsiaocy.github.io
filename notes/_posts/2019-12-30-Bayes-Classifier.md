@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: 1920px-Python_logo_and_wordmark.svg.png
+  teaser: 0010426400252.jpg
 
 layout: article
 title: Bayes Classifier
@@ -105,10 +105,4 @@ Thus, the goal of bayes classifier is to maximize likelihood \\(P(x\|c)\\), and 
 [Chapter 4 Bayesian Decision Theory](https://www.byclb.com/TR/Tutorials/neural_networks/ch4_1.htm)\\
 [How to Develop a Naive Bayes Classifier from Scratch in Python](https://machinelearningmastery.com/classification-as-conditional-probability-and-the-naive-bayes-algorithm/)
 
- 
-<!-- $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ -->
 
-
-<!-- \\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\) -->
-
----
