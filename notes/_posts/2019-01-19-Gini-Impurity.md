@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: fig_RF_1.jpg
+  teaser: 0010426400252.jpg
 
 layout: article
 title: Gini Impurity
