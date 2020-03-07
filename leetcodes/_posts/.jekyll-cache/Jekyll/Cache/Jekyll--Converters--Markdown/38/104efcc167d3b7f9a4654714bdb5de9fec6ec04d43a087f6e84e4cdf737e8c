@@ -1,0 +1,89 @@
+I"�<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p>In order to derive the concept of Bayes classifier step by step and learn it. Here keeps a note.</p>
+
+<p>Based on the Prof. Chou, who describes the principle of Bayes decesion theory for multiple-classification concerning of probability and loss.<br />
+依照周志華教授的思路，他從機率與損失來解釋貝葉斯決策理論在多分類任務上之原理。</p>
+
+<p>Given a dataset <script type="math/tex">X=\{x_1, x_2, ..., x_M\}</script> where exists M samples and labelset <script type="math/tex">Y=\{c_1, c_2, ..., c_N\}</script> where exists N classes. We can have a conditional risk formula:<br />
+首先，假設我們有一資料集\(D\)存有\(M\)筆樣本與標籤集\(Y\)具有\(N\)類標籤，基於前段所提到的機率與損失，可構成期望損失（亦為條件風險）：</p>
+
+<p>\begin{equation}
+R(c_i|x) = \sum_{j=1}^{N}{\lambda_{ij}P(c_j|x)}
+\label{eq:first}
+\tag{1}
+\end{equation}</p>
+
+<p>Here we know:<br />
+\(R(c_i|x)\) is the expected loss from miscatogorizing sample \(x\) to class \(c_i\). <br />
+\(\lambda_{ij}\) is the loss from miscatogorizing a sampole \(c_i\) to \(c_j\). <br />
+\(P(c_j|x)\) is the postrior probability.</p>
+
+<p>Above formula is to calculate the risk from the loss from miscatogorizing one sampole \(c_i\) to \(c_j\). We want to obtain the over risk by assuming \(h:X\mapsto Y\) (\(h\) means a rule which input space \(X\) reflects to output space \(Y\)).</p>
+
+<p>Hence we can get:</p>
+
+<p>\begin{equation}
+R(h) = \mathop{\mathbb{E}}[R(h(x)|x)]
+\label{eq:second}
+\tag{2}
+\end{equation}</p>
+
+<p>In order to reduce the over risk \(R(h)\), we can make it by minimizing the \(R(h(x)|x)\):</p>
+
+<script type="math/tex; mode=display">h^{\ast}(x) = \mathop{\arg\min}_{c \in Y}[R(h(x)|x)] \longrightarrow \mathop{\arg\min}_{c \in Y}[R(c|x)]</script>
+
+<p>\(h^{\ast}\) helps us to find the minimun overall risk \(R(c|x)\),in other words giving the best performance.</p>
+
+<p>If we reckon conditional risk with loss \(c_i\) and \(c_j\) with:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\lambda_{ij}=
+\begin{cases}
+0& \text{if } i=j;\\
+1& \text{otherwise,}
+\end{cases} %]]></script>
+
+<p>Then we derive the conditional risk \(R(c_i|x)\) when \(i\neq j\):</p>
+
+<p>\begin{equation}
+R(c_i|x) = \sum_{j\neq i}^{N} \lambda_{ij}P(c_j|x) <br />
+= \sum_{j\neq i}^{N} P(c_j|x) \ 
+= 1 - P(c_i|x)
+\label{eq:third}
+\tag{3}
+\end{equation}</p>
+
+<p>Therefore, we can simplify and get the over risk:</p>
+
+<p>\begin{equation}
+R(c|x) = 1 - P(c|x)
+\label{eq:forth}
+\tag{4}
+\end{equation}</p>
+
+<p>Thus, to minimize \(R(c|x)\) is equivelent to maximize posterior probability \(P(c|x)\).</p>
+
+<p>Bayes theroem says:</p>
+
+<p>\begin{equation}
+P(c|x) = \frac{P(c)P(x|c)}{P(x)}
+\label{eq:fifth}
+\tag{5}
+\end{equation}</p>
+
+<p>Here we know:<br />
+\(P(c)\) is prior probability. <br />
+\(P(x|c)\) is class-conditional probability or likelihood. <br />
+\(P(x)\) is evidence.</p>
+
+<p>Due to prior probability \(P(c)\) is how frequent the class occurred and Likelihood \(P(x|c)\) involves with joint probability of all samples \(x\) that usually be estimated by using MLE(Maximum Likelihood Extimation).</p>
+
+<p>Thus, the goal of bayes classifier is to maximize likelihood \(P(x|c)\), and MLE is another chapter.</p>
+
+<p><strong><em>Reference</em></strong><br />
+机器学习-周志华<br />
+<a href="https://www.byclb.com/TR/Tutorials/neural_networks/ch4_1.htm">Chapter 4 Bayesian Decision Theory</a><br />
+<a href="https://machinelearningmastery.com/classification-as-conditional-probability-and-the-naive-bayes-algorithm/">How to Develop a Naive Bayes Classifier from Scratch in Python</a></p>
+
+:ET

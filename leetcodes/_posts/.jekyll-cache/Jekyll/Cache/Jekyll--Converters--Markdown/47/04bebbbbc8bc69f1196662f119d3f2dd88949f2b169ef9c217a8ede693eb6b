@@ -1,0 +1,65 @@
+I"T<ul>
+  <li><strong>Title</strong>: #1 Two Sum</li>
+  <li><strong>Diffculity</strong>: Easy</li>
+  <li><strong>Description</strong>: Given an array of integer and returned two indexes of two numbers that they add up to a specific target.</li>
+</ul>
+
+<p>Example:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>nums = [2, 7, 11, 15], target = 9, then return [0, 1]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>My solution-1:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="s">"""
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>            
+            <span class="n">a</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">j</span>
+            <span class="n">ii</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">ii</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">ii</span> <span class="o">&lt;</span> <span class="n">l</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">ii</span><span class="p">]:</span>
+                        <span class="k">return</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">ii</span><span class="p">]</span>
+                    
+                <span class="k">elif</span> <span class="n">ii</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">:</span>
+                    <span class="k">break</span>
+</code></pre></div></div>
+<ul>
+  <li>Runtime: <strong>4540  ms</strong></li>
+  <li>Memory Usage: <strong>7.2 MB</strong></li>
+</ul>
+
+<p><a href="https://leetcode.com/problems/two-sum/discuss/231600/Simple-Python-solution.-36ms-faster-than-99.75">Solution-2</a>:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="n">seen</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">seen</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">j</span><span class="p">],</span> <span class="n">i</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">seen</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div></div>
+<ul>
+  <li>Runtime: <strong>4540  ms</strong>, faster than <strong>99.75%</strong> of Python3 online submissions</li>
+  <li>Memory Usage: <strong>7.2 MB</strong>, less than <strong>62.13%</strong> of Python3 online</li>
+</ul>
+
+<p><strong>Ideas</strong>: Obtain the difference then find it in the list. If not, start again from the second number.</p>
+
+<p>Reference:</p>
+<ol>
+  <li><a href="https://leetcode.com/problems/two-sum/discuss/231600/Simple-Python-solution.-36ms-faster-than-99.75">LeetCode Discussion by awrogers14</a></li>
+</ol>
+
+:ET
