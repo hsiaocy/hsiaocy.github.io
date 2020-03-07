@@ -5,12 +5,12 @@
   excerpt: "Yes it's me."
   image: IMG_5343.jpg
 
-# - title: Life
-  # url: /life/
-  # excerpt: "Things came to my life."
-  # image: Negative0-02-34A(1).jpg
+- title: Learning Notes
+  url: /learningnotes/
+  excerpt: "I keep, therefore I am."
+  image: Negative0-23-22(1).jpg
 
-- title: Notes
-  url: /notes/
-  excerpt: "Things I keep that I don't wanna forget."
+- title: Leetcodes
+  url: /leetcodes/
+  excerpt: "One leetcode per day, make your brain a day."
   image: Negative0-25-22A(1).jpg
