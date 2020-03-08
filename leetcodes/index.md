@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Latest Posts"
+title: "Practices"
 permalink: /leetcodes/
 ---
 
