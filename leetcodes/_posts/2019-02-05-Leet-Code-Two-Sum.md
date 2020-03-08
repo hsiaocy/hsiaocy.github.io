@@ -3,11 +3,11 @@ image:
   teaser: Leetcode.jpg
 
 layout: article
-title: Leet Code Two Sum
-date: 2019-02-05
+title: LeetCode - 1
+date: 2020-03-08
 categories: notes
 author: chunyi_hsiao
-tags: [Python, LeetCode]
+tags: [Programming]
 share: true
 ---
 
@@ -15,52 +15,59 @@ share: true
 - **Diffculity**: Easy 
 - **Description**: Given an array of integer and returned two indexes of two numbers that they add up to a specific target.
 
-Example: 
-
+- **Example**: 
 |nums = [2, 7, 11, 15], target = 9, then return [0, 1]|
 
+- **Explanation**: Obtain the difference then find it in the list. If not, start again from the second number.
 
-My solution-1:
+Solution-1:
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        // if (nums == [])
+        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        for (int i=0; i<nums.length; i++){
+            if (map.containsKey(target - nums[i])){
+                return new int [] { map.get(target - nums[i]), i};
+            }
+            map.put(nums[i], i);
+        }
+        return null;
+    }
+}
+```
+- Time&Space Complexity: $$O(n), O(n)$$
+
+Solution-2:
 ```python
 class Solution:
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        l = len(nums)
-        for i, j in enumerate(nums):            
-            a = target - j
-            ii = i
-            while True:
-                ii += 1
-                if ii < l:
-                    if a == nums[ii]:
-                        return [i, ii]
-                    
-                elif ii >= l:
-                    break
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        k = 0
+        res = {}
+        for i in range(len(nums)):
+            k = target - nums[i]
+            if k in res:
+                return [res.get(k), i]
+            res[nums[i]] = i
 ```
-- Runtime: **4540  ms**
-- Memory Usage: **7.2 MB**
+- Time&Space Complexity: $$O(n), O(n)$$
 
 
 [Solution-2](https://leetcode.com/problems/two-sum/discuss/231600/Simple-Python-solution.-36ms-faster-than-99.75):
 ```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        ''' We can alternatively use "enumerate" to try...'''
         seen = {}
         for i, j in enumerate(nums):
             if (target - j) in seen:
                 return [seen[target - j], i]
             else:
                 seen[j] = i
-        else:
-            return []
 ```
-- Runtime: **4540  ms**, faster than **99.75%** of Python3 online submissions
-- Memory Usage: **7.2 MB**, less than **62.13%** of Python3 online 
+- Time&Space Complexity: $$O(n), O(n)$$
 
-**Ideas**: Obtain the difference then find it in the list. If not, start again from the second number.
 
 
 Reference:
