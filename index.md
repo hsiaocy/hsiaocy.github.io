@@ -1,28 +1,13 @@
 ---
 layout: archive
-description: Welcome
+description: Hello there!
+permalink: /
 ---
 <img style="float:right; object-fit: cover; margin: 1px 19px" width="484" height="321" src="/../images/osakadouble.jpg" alt="Profile">
 
-
-<h2>Welcome to my blog!</h2>
-
-<p>I'm Chunyi Hsiao, a <b>film photography</b> lover and 
-	an <b>engineer</b> too.</p>
-
-<p> I have done a reasearch in 
-	<a href="https://www.waseda.jp/top/en">Waseda University</a>
-	and interested in
-</p>
-
-- **Data Scientist** 
-- **Quantitative Trading**
-- **Machine Learning Engineer**
-
-<p>
-	<br>
-</p>
-
-<p>Should you have any question, please send me
-	<a href="mailto:hsiaocy0626@gmail.com"><b>mail</b></a>.
-</p>
+<h1>Hello there!</h1>
+<h4>Here's my bookshelf where I pile my takeaway and notes up.</h4>
+To meet such poistions so preparing some skills to followup.
+<li><strong>SW engineer</strong> with LeetCodes </li>
+<li><strong>Data scientist</strong> with Kaggle notebooks </li>
+<li><strong>ML/DL engineer</strong> with Statistics&Probability, Modeling in Python</li>

@@ -1,10 +1,4 @@
 # Site navigation links
-
-- title: About Me
-  url: /about/
-  excerpt: "Yes it's me."
-  image: IMG_5343.jpg
-
 - title: Learning Notes
   url: /learningnotes/
   excerpt: "I keep, therefore I am."

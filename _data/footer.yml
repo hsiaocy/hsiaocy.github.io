@@ -1,7 +1,13 @@
 # Footer navigation links
 
+- title: IamAllen
+  url: https://hsiaocy.herokuapp.com/
+
 - title: GitHub
   url: https://github.com/hsiaocy  
 
 - title: LinkedIn
   url: https://www.linkedin.com/in/chunyi-hsiao-21488b122/  
+
+- title: E-mail
+  url: hsiaocy0626@gmail.com
