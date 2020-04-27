@@ -1,0 +1,35 @@
+I"“<div class="tiles">
+
+	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
+  <a href="http://localhost:4000/learningnotes/notes/Bayes-Classifier/" title="Bayes Classifier" class="post-teaser"><img src="http://localhost:4000/images/0010426400252.jpg" alt="teaser" itemprop="image" />
+    </a>
+  <p class="entry-date date published"><time datetime="2019-12-30" itemprop="datePublished">December 30, 2019</time></p>
+  <h2 class="post-title" itemprop="name"><a href="http://localhost:4000/learningnotes/notes/Bayes-Classifier/">Bayes Classifier</a></h2>
+  <p class="post-excerpt" itemprop="description">
+
+</p>
+</article><!-- /.tile -->
+
+
+	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
+  <a href="http://localhost:4000/learningnotes/notes/Little-Crawling-Issue/" title="Little Crawling Issue" class="post-teaser"><img src="http://localhost:4000/images/1920px-Python_logo_and_wordmark.svg.png" alt="teaser" itemprop="image" />
+    </a>
+  <p class="entry-date date published"><time datetime="2019-01-24" itemprop="datePublished">January 24, 2019</time></p>
+  <h2 class="post-title" itemprop="name"><a href="http://localhost:4000/learningnotes/notes/Little-Crawling-Issue/">Little Crawling Issue</a></h2>
+  <p class="post-excerpt" itemprop="description">Today I probably did the rehearsal for my end-term defense (still to tired to believe this shit through). And EVENTUALLY I can start to study and to build th...</p>
+</article><!-- /.tile -->
+
+
+	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
+  <a href="http://localhost:4000/learningnotes/notes/Gini-Impurity/" title="Gini Impurity" class="post-teaser"><img src="http://localhost:4000/images/0010426400252.jpg" alt="teaser" itemprop="image" />
+    </a>
+  <p class="entry-date date published"><time datetime="2019-01-20" itemprop="datePublished">January 20, 2019</time></p>
+  <h2 class="post-title" itemprop="name"><a href="http://localhost:4000/learningnotes/notes/Gini-Impurity/">Gini Impurity</a></h2>
+  <p class="post-excerpt" itemprop="description">Directly get into the topic, about the Gini Impurity Index (Gini).
+</p>
+</article><!-- /.tile -->
+
+
+</div>
+<!-- /.tiles -->
+:ET

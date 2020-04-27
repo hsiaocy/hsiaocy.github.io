@@ -1,0 +1,37 @@
+I"�<ul>
+  <li><strong>Title</strong>: #66 Plus One</li>
+  <li><strong>Diffculity</strong>: Easy</li>
+  <li>
+    <p><strong>Description</strong>: Given a non-empty array of digits representing a non-negative integer, plus one to the integer. The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.</p>
+  </li>
+  <li><strong>Explanation</strong>: 給定一個陣列<script type="math/tex">digits</script>，其中的元素代表一個數，目的為回傳加1後的數，且為陣列型態。<br />
+先宣告<script type="math/tex">carry</script>為進位的<script type="math/tex">flag</script>，加1的動作從最後的元素開始遍歷<script type="math/tex">digits</script>。若最後的元素為<script type="math/tex">digits[n]==9</script>，則<script type="math/tex">digits[n] = 0</script>且<script type="math/tex">carry = 1</script>，並往前判斷前一個元素<script type="math/tex">digits[n-1]</script>。<br />
+若遍歷完<script type="math/tex">digits</script>後，<script type="math/tex">carry = 1</script>且最前的元素<script type="math/tex">digits[0]==0</script>，這表示<script type="math/tex">digits[0]</script>已進位為0。故我們再宣告一新陣列<script type="math/tex">result</script>且長度為<script type="math/tex">digits.length+1</script>，並指定最前的元素為1；若無則直接回傳<script type="math/tex">digits</script>。</li>
+</ul>
+
+<p>Solution:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">plusOne</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">digits</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">digits</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--){</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">digits</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">9</span><span class="o">){</span>
+                <span class="n">digits</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+                <span class="n">carry</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+                <span class="n">digits</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">digits</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">carry</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
+            <span class="kt">int</span> <span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">digits</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+            <span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">digits</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<ul>
+  <li>Time&amp;Space Complexity: <script type="math/tex">O(n), O(n+1)</script></li>
+</ul>
+:ET

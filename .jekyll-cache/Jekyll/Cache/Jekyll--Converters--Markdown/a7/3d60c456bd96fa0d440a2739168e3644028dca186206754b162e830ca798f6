@@ -1,0 +1,3 @@
+I"‘<p>Origin: to <code class="highlighter-rouge">pip3 freeze &gt; requirements.txt&gt;</code>
+root cause: https://github.com/pypa/pip/pull/6225</p>
+:ET

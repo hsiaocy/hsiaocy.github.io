@@ -1,0 +1,9 @@
+I"È<ul>
+  <li><strong>Exception</strong>:
+    <ul>
+      <li>The ValueError raised after typed
+  <code class="highlighter-rouge">pip3 freeze &gt; requirements.txt&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+:ET

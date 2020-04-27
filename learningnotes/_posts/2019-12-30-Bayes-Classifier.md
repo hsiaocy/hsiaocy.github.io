@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: 0010426400252.jpg
+  teaser: Bayes.jpeg
 
 layout: article
 title: Bayes Classifier

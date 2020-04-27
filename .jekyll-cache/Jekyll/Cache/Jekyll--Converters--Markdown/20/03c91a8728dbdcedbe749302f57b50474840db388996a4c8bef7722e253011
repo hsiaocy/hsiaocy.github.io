@@ -1,0 +1,9 @@
+I"R<ul>
+  <li><strong>Origin</strong>:
+    <ul>
+      <li>An error raised while <code class="highlighter-rouge">pip3 freeze &gt; requirements.txt&gt;</code></li>
+      <li>The error like <a href="https://stackoverflow.com/questions/54454367/different-error-messages-when-using-pip-install-pip-list-ect">this</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: 0010426400252.jpg
+  teaser: DTree.jpeg
 
 layout: article
 title: Gini Impurity
@@ -26,4 +26,4 @@ To translate that quote in English, he declared some important points:
 - Purpose is to obtain the impurity as small as possible covered all nodes.
 
 ### *TODO*
-- Write in detail.
+- Will update derivation mathematically.

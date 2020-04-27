@@ -1,0 +1,36 @@
+I"L<div class="tiles">
+
+	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
+  <a href="http://localhost:4000/others/notes/Python-Version-Bug/" title="Python Version Bug" class="post-teaser"><img src="http://localhost:4000/images/others.jpg" alt="teaser" itemprop="image" />
+    </a>
+  <p class="entry-date date published"><time datetime="2020-04-27" itemprop="datePublished">April 27, 2020</time></p>
+  <h2 class="post-title" itemprop="name"><a href="http://localhost:4000/others/notes/Python-Version-Bug/">Python Version Bug</a></h2>
+  <p class="post-excerpt" itemprop="description">
+  Exception:
+    
+      
+        The ValueError raised after typed
+
+        pip3 freeze &gt; requirements.txt&gt;
+      
+    
+  
+
+</p>
+</article><!-- /.tile -->
+
+
+	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
+  <a href="http://localhost:4000/others/notes/Instant-Coffee/" title="Love Hurricane Among Django, Front-end and Heroku" class="post-teaser"><img src="http://localhost:4000/images/others.jpg" alt="teaser" itemprop="image" />
+    </a>
+  <p class="entry-date date published"><time datetime="2019-02-05" itemprop="datePublished">February 05, 2019</time></p>
+  <h2 class="post-title" itemprop="name"><a href="http://localhost:4000/others/notes/Instant-Coffee/">Love Hurricane Among Django, Front-end and Heroku</a></h2>
+  <p class="post-excerpt" itemprop="description">Nella said "Love is complated, but web-dev is much more."
+How it works when they are involved in a love hurricane with django, front-end and heroku?
+</p>
+</article><!-- /.tile -->
+
+
+</div>
+<!-- /.tiles -->
+:ET

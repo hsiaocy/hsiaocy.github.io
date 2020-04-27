@@ -1,0 +1,4 @@
+I"<ul>
+  <li>origin: command to <code class="highlighter-rouge">pip3 freeze &gt; requirements.txt&gt;</code> but get error like <a href="https://stackoverflow.com/questions/54454367/different-error-messages-when-using-pip-install-pip-list-ect">this</a></li>
+</ul>
+:ET

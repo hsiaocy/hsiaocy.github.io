@@ -1,0 +1,70 @@
+I"�<ul>
+  <li><strong>Title</strong>: #350 Intersection of Two Arrays II</li>
+  <li><strong>Diffculity</strong>: Easy</li>
+  <li><strong>Description</strong>: Given two arrays, write a function to compute their intersection.\</li>
+  <li>
+    <p><strong>Notes</strong>: 
+Each element in the result should appear as many times as it shows in both arrays. The result can be in any order.</p>
+  </li>
+  <li>
+    <p><strong>Follow up</strong>:<br />
+What if the given array is already sorted? How would you optimize your algorithm?<br />
+What if nums1’s size is small compared to nums2’s size? Which algorithm is better? <em>(Solution1 is much flexible)</em><br />
+What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?</p>
+  </li>
+  <li><strong>Explanation</strong>: <br />
+方法1: 先將<script type="math/tex">nums1</script>轉為<script type="math/tex">dict</script>做一次遍歷<script type="math/tex">O(n)</script>，再做一次遍歷判斷<script type="math/tex">nums2</script>的元素是否存在於<script type="math/tex">dict</script>內。其好處為不用事先排序。<br />
+方法2: 先將<script type="math/tex">nums1</script>和<script type="math/tex">nums2</script>排序。設定兩指標(<script type="math/tex">i, j</script>)分別指向兩陣列，若判斷兩元素相同則儲存<script type="math/tex">nums[i]</script>，若兩者不同則調整兩指標</li>
+</ul>
+
+<p>Solution-1 (without sorted):</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">interset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">dict1</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums1</span><span class="p">:</span>
+            <span class="n">dict1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dict1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">nums2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="ow">in</span> <span class="n">dict1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                <span class="n">dict1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+<ul>
+  <li>Time&amp;Space Complexity: <script type="math/tex">O(n), O(n)</script></li>
+</ul>
+
+<p>Solution-2 (with sorted arrays):</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">interset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="n">nums1</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums1</span><span class="p">)</span>
+        <span class="n">nums2</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">nums1</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">nums2</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+                <span class="n">j</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">j</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></div>
+<ul>
+  <li>
+    <p>Time&amp;Space Complexity: <script type="math/tex">O(n), O(n)</script></p>
+  </li>
+  <li>
+    <p>Discussion:<br />
+Assume <script type="math/tex">nums1=[0,1000]</script> and <script type="math/tex">nums2=[0,1,2,.....999]</script> 1000 long, <script type="math/tex">% <![CDATA[
+size(nums1) <<< size(nums2) %]]></script>，若以<script type="math/tex">len(nums1)=N</script> and <script type="math/tex">len(nums2)=M</script>代替，則：<br />
+方法1中，若將nums1轉為dict則space: O(N), time: O(M); 若將nums2轉為dict則space: O(M), time: O(N)<br />
+方法2中space: O(N), time: O(M)\</p>
+  </li>
+</ul>
+
+:ET

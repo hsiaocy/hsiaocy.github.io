@@ -2,7 +2,7 @@
 title: HSIAO CHUNYI
 email: hsiaocy@fuji.waseda.jp
 description: > # "Hello world!" # this means to ignore newlines until "baseurl:" Hello world.
-  Hellooooooooooooo!
+  Hello there!
 
 
 # Link settings
@@ -17,7 +17,7 @@ social_sites:
   #dribbble: jekyll
   facebook: hsiaochunyi
   #flickr: jekyll
-  #instagram: hsiaochunyi
+  instagram: hsiaochunyi
   linkedin: chunyi-hsiao-21488b122
   #pinterest: jekyll
   #youtube: jekyll
@@ -61,9 +61,9 @@ gems:
 # Site owner
 owner:
   name: hsiaocy
-  email: hsiaocy@fuji.waseda.jp
-  bio: yolo
-  avatar: bio-IMG_5343.jpg # 160x160 px image for author byline
+  email: hsiaocy0626@gamil.com
+  bio: "It could come down to a simple declaration, you're either a bollean or a variable."
+  avatar: allen-profile3.jpg # 160x160 px image for author byline
   disqus-shortname:
 
 

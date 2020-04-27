@@ -1,0 +1,8 @@
+I"�<h1 id="1017-convert-to-base--2-medium">#1017 Convert to Base -2 (Medium)</h1>
+<ul>
+  <li><strong>Description</strong>: Given a number N, return a string consisting of “0”s and “1”s that represents its value in base -2 (negative two). The returned string must have no leading zeroes, unless the string is “0”..<br />
+Example 1: Input=2, Output=”110”, <em>Explantion: <script type="math/tex">(-2) ^ 2 + (-2) ^ 1 = 2</script></em><br />
+Example 2: Input=3, Output=”111”, <em>Explantion: <script type="math/tex">(-2) ^ 2 + (-2) ^ 1 + (-2) ^ 0 = 3</script></em><br />
+Example 3: Input=4, Output=”100”, <em>Explantion: <script type="math/tex">(-2) ^ {2} = 4</script></em></li>
+</ul>
+:ET

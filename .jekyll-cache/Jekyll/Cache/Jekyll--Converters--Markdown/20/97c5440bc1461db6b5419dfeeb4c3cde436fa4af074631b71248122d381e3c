@@ -1,0 +1,75 @@
+I"C<h1 id="1017-convert-to-base--2-medium">#1017 Convert to Base -2 (Medium)</h1>
+<ul>
+  <li>
+    <p><strong>Description</strong>: Given a number N, return a string consisting of “0”s and “1”s that represents its value in base -2 (negative two). The returned string must have no leading zeroes, unless the string is “0”..<br />
+Example 1: Input=2, Output=”110”, <em>Explantion: <script type="math/tex">(-2) ^ 2 + (-2) ^ 1 = 2</script></em><br />
+Example 2: Input=3, Output=”111”, <em>Explantion: <script type="math/tex">(-2) ^ 2 + (-2) ^ 1 + (-2) ^ 0 = 3</script></em><br />
+Example 3: Input=4, Output=”100”, <em>Explantion: <script type="math/tex">(-2) ^ {2} = 4</script></em></p>
+  </li>
+  <li><strong>Explanation</strong>:<br />
+先以<script type="math/tex">Base_2()</script>來做範例再來推算<script type="math/tex">Base_{-2}()</script>如何實現。<br />
+範例 <script type="math/tex">Base_2(N=3)</script>:<br />
+divmod(3, 2) = 1, 1<br />
+divmod(1, 2) = 0, 1<br />
+因此<script type="math/tex">Base_2(3)</script> = “11”，由divmod()回傳的兩個<script type="math/tex">reminders</script>所組成。<br />
+equation可回推 <script type="math/tex">3 = (1\times2^1) + (1\times2^0)</script></li>
+  <li>再來看<script type="math/tex">Base_{-2}(N=3)</script>:<br />
+divmod(3, -2) = -2, -1<br />
+normally <script type="math/tex">reminder \in {0 ,1}</script>，但這邊出現<script type="math/tex">-1</script>，因此我們限制<script type="math/tex">reminder\in{0, 1}</script>，以下列equoation顯示：<br />
+<script type="math/tex">3 = (-2\times-2) + (-1)</script><br />
+<script type="math/tex">= (-2\times-2) - 2 + (-1) + 2</script><br />
+<script type="math/tex">= (-2\times-2) + (-2\times1) + (-1) + 2</script><br />
+<script type="math/tex">= (-2\times(-2+1)) + (-1) + 2</script><br />
+上式可使得<script type="math/tex">% <![CDATA[
+reminder<0 %]]></script>時，只要使<script type="math/tex">quotient+1, reminder+2</script>，便可不改變值但限制住<script type="math/tex">reminder</script>。</li>
+</ul>
+
+<p>Solution:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">baseNeg2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        
+        <span class="c1"># N, r = divmod(N, -2)
+</span>        <span class="c1"># N_(n)/(-2) = N_(n-1)...r
+</span>        <span class="c1"># r = 0, 1 or -1. if r=-1, then r+=2 and N+=1
+</span>        <span class="c1"># N_(n) = N_(n-1) * (-2) + r
+</span>        
+        <span class="n">res</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="k">while</span> <span class="n">N</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">N</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">N</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">r</span> <span class="o">+=</span> <span class="mi">2</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">))</span> <span class="o">+</span> <span class="n">res</span>
+        <span class="k">return</span> <span class="n">res</span> <span class="k">if</span> <span class="n">res</span> <span class="k">else</span> <span class="s">'0'</span>
+</code></pre></div></div>
+<ul>
+  <li>
+    <p>Time&amp;Space Complexity: <script type="math/tex">O(n), O(1)</script></p>
+  </li>
+  <li><em>(<a href="https://leetcode.com/problems/convert-to-base-2/discuss/540820/python-fast-(greater98)-short-detailed-explanation-and-some-tips-only-basic-arithmetics-any-base">Reference</a>)</em></li>
+  <li><em>(divmod()為python的built-in function，輸入<script type="math/tex">divisor N</script>以及<script type="math/tex">Base 2</script>會回傳<script type="math/tex">quotient, reminder</script>。)</em></li>
+</ul>
+
+<h1 id="504-base-7-easy">#504 Base 7 (Easy)</h1>
+<ul>
+  <li><strong>Description</strong>: Given an integer, return its base 7 string representation.<br />
+Example 1: Input=100, Output=”202”, <em>Explantion: <script type="math/tex">(7)^2 \times 2 + (7)^1 \times 0 + (7)^0 \times 2 = 100</script></em><br />
+Example 2: Input=-10, Output=”-10”, <em>Explantion: <script type="math/tex">(7)^1 \times -1 + (7)^0 \times 0 = -7</script></em></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">convertToBase7</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">'0'</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="mi">7</span>
+        <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">Q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">Q</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="n">res</span>
+        
+        <span class="k">return</span> <span class="n">res</span> <span class="k">if</span> <span class="n">num</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="s">'-'</span><span class="o">+</span><span class="n">res</span>
+</code></pre></div></div>
+
+:ET

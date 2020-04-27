@@ -1,0 +1,20 @@
+I"—<p>Playground Intro: A space where contains following infrastructure.</p>
+
+<ol>
+  <li><strong>Data Preprocessing</strong></li>
+</ol>
+
+<p>Data Preprocessing is the most important part for the project. It includes <sup><strong>1</strong></sup>collecting, <sup><strong>2</strong></sup>arranging and <sup><strong>3</strong></sup>preparing the data for feature engineering section.</p>
+
+<ul>
+  <li>
+    <p>The collection is to crawl the raw data from the published websites like <a href="http://www.twse.com.tw/zh/">TWSE</a>. Here to worry about is to prevent being as DDOS while visiting the server too frequent. If it went smoothly, then store the data with .csv format or other preferences.</p>
+  </li>
+  <li>
+    <p>The arrangement is to standardizing the stored data by using a common library <a href="https://pandas.pydata.org">Pandas</a>. The raw data is temporal, generally contains date, prices and volume, which is also able to derive other indexes.</p>
+  </li>
+  <li>
+    <p>The preparation for the next is to orgnize mentioned needs above as methods called: <strong>DataCrawler</strong>, <strong>DataLoader</strong> and <strong>DataHandler</strong>.</p>
+  </li>
+</ul>
+:ET

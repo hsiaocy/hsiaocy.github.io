@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Learning Notes"
+title: "I keep it when I was little"
 permalink: /learningnotes/
 ---
 

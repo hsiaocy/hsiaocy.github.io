@@ -1,0 +1,42 @@
+I"�	<ul>
+  <li><strong>Origin</strong>:
+    <ul>
+      <li>The ValueError raised after typed <code class="highlighter-rouge">pip3 freeze &gt; requirements.txt&gt;</code> and it gave: <code class="highlighter-rouge">ValueError: ("Missing 'Version:' header and/or METADATA file", Unknown [unknown version] (c:\users\james\appdata\local\programs\python\python37\lib\site-packages))</code></li>
+      <li>The error like:
+  ```Exception:
+  Traceback (most recent call last):
+File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_vendor\pkg_resources__init__.py”, line 2584, in version
+  return self._version
+File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_vendor\pkg_resources__init__.py”, line 2691, in <strong>getattr</strong>
+  raise AttributeError(attr)
+  AttributeError: _version</li>
+    </ul>
+
+    <p>During handling of the above exception, another exception occurred:</p>
+
+    <p>Traceback (most recent call last):
+    File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_internal\cli\base_command.py”, line 176, in main
+      status = self.run(options, args)
+    File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_internal\commands\list.py”, line 148, in run
+      self.output_package_listing(packages, options)
+    File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_internal\commands\list.py”, line 205, in output_package_listing
+      data, header = format_for_columns(packages, options)
+    File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_internal\commands\list.py”, line 271, in format_for_columns
+      row = [proj.project_name, proj.version]
+    File “c:\users\james\appdata\local\programs\python\python37\lib\site-packages<br />
+  pip_vendor\pkg_resources__init__.py”, line 2589, in version
+      raise ValueError(tmpl % self.PKG_INFO, self)
+  ValueError: (“Missing ‘Version:’ header and/or METADATA file”, Unknown [unknown
+  version] (c:\users\james\appdata\local\programs\python\python37\lib\site-package
+  s))```
+  <a href="https://stackoverflow.com/questions/54454367/different-error-messages-when-using-pip-install-pip-list-ect">link</a></p>
+  </li>
+  <li><strong>root cause</strong> is reffered to [here]((https://github.com/pypa/pip/pull/6225).</li>
+</ul>
+:ET

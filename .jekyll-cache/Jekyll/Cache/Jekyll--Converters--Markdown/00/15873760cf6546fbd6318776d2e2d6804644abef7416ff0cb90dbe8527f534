@@ -1,0 +1,22 @@
+I"‘<ul>
+  <li><strong>Origin</strong>:
+    <ul>
+      <li>
+        <p>The ValueError raised after typed <code class="highlighter-rouge">pip3 freeze &gt; requirements.txt&gt;</code> and it gave: <code class="highlighter-rouge">ValueError: ("Missing 'Version:' header and/or METADATA file", Unknown [unknown version] (c:\users\james\appdata\local\programs\python\python37\lib\site-packages))</code></p>
+
+        <pre class="brush: python">
+  Exception:
+  Traceback (most recent call last):
+    File "c:\users\james\appdata\local\programs\python\python37\lib\site-packages\
+  pip\_vendor\pkg_resources\__init__.py", line 2584, in version
+      return self._version
+    File "c:\users\james\appdata\local\programs\python\python37\lib\site-packages\
+  pip\_vendor\pkg_resources\__init__.py", line 2691, in __getattr__
+      raise AttributeError(attr)
+  AttributeError: _version
+</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+:ET

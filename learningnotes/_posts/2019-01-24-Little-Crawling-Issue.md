@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: 1920px-Python_logo_and_wordmark.svg.png
+  teaser: DataCrawling.jpeg
 
 layout: article
 title: Little Crawling Issue

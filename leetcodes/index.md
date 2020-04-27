@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Practices"
+title: "A long way alone"
 permalink: /leetcodes/
 ---
 
