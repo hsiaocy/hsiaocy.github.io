@@ -1,0 +1,219 @@
+I"�)<h4>Nella said "Love is complated, and hurricane is scary."</h4>
+<p>How it works when they are involved in a love hurricane with django, front-end and heroku?</p>
+
+<ul>
+  <li>goal to go: build <a href="https://hsiaocy.herokuapp.com/">my online resume</a></li>
+  <li>things to have:
+    <ol>
+      <li>Django - overall web framework</li>
+      <li>front-end - <a href="https://freehtml5.co/profile-free-html5-bootstrap-template-for-personal-and-vcard-resume-websites/">a fancy template</a></li>
+      <li>heroku - deploy your site</li>
+    </ol>
+  </li>
+</ul>
+
+<p>Story:</p>
+<ol>
+  <li>Django
+    <ul>
+      <li><strong>prerequisites</strong>: python3.x, venv and Django pack are already installed</li>
+      <li><strong>Create a project</strong>: it contains all the stuff we will mention later, here use “UnchainedDjango” as my project name. Oepn CLI and change directory to “UnchainedDjango/” to create project. Keeping use UnchainedDjango as project name, and you will get a tree like</li>
+    </ul>
+    <pre class="brush: bash">
+     django-admin startproject UnchainedDjango
+     cd UnchainedDjango
+
+     .(UnchainedDjango)  &lt;- root dir, "git init" here for heroku deployment
+     ├── manage.py       &lt;- our tool script (python3 manage.py [func])
+     └── unchaineddjango &lt;- (project manager?)
+         ├── __init__.py
+         ├── asgi.py
+         ├── settings.py &lt;- site configuratin manager
+         ├── urls.py     &lt;- url's boss which manages all sites, import app's site here
+         └── wsgi.py
+ </pre>
+    <ul>
+      <li><strong>Create a app</strong>: to generate a folder which points to the site(app). If you want to modify at site, modify here. More detail: <a href="https://docs.djangoproject.com/en/3.0/intro/tutorial01/#creating-the-polls-app">link</a></li>
+    </ul>
+
+    <pre class="brush: bash">
+     django-admin startapp homepage
+
+     .(UnchainedDjango)  &lt;- root dir, "git init" here for heroku deployment
+     ├── manage.py
+     ├── unchaineddjango/
+     └── hoamepage/
+         ├── migrations/
+         │	└─__init__.py
+         ├── __init__.py
+         ├── admin.py
+         ├── app.py
+         ├── models.py
+         ├── tests.py
+         ├── urls.py     &lt;- not default created, need to create by myself
+         └── views.py   
+ </pre>
+
+    <ul>
+      <li><strong>Set app into config(setting.py)</strong>:
+        <ul>
+          <li>open file <strong>UnchainedDjango/setting.py</strong> when <strong>testing</strong>…
+            <ul>
+              <li>add app path <code class="highlighter-rouge">INSTALLED_APPS[ ..., 'homepage',]</code></li>
+              <li>add template path <code class="highlighter-rouge">'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\', '/')],</code></li>
+              <li>add static path <code class="highlighter-rouge">STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static'))</code></li>
+              <li>add static-files path <code class="highlighter-rouge">STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), '/var/www/static/',]</code></li>
+              <li>make sure “DEBUG=True”</li>
+            </ul>
+          </li>
+          <li>open file <strong>UnchainedDjango/setting.py</strong> when <strong>deploy</strong>…
+            <ul>
+              <li>add static path <code class="highlighter-rouge">STATIC_ROOT = 'static'</code></li>
+              <li>add HTTP connection <code class="highlighter-rouge">SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')'</code></li>
+              <li>add to allow all domain to reach<code class="highlighter-rouge">ALLOWED_HOSTS = ['*']</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Summary</strong>:</p>
+
+        <ul>
+          <li>Since a bunch of tutorials can guide you to do so, I dont’t explain everything detailedly.</li>
+          <li>Some frequently obstruction orrcurred:
+            <ul>
+              <li>nope</li>
+            </ul>
+          </li>
+          <li>Frequently opened files:
+            <ul>
+              <li>./UnchainedDjango/setting.py: config manager</li>
+              <li>./UnchainedDjango/urls.py: url manager</li>
+              <li>./homepage/urls.py:</li>
+              <li>./homepage/views.py:</li>
+              <li>./template/homepage.html: the site/app write in html</li>
+              <li>./static/homepage/* : is created by myself and may contain: css, fonts, images, js and sass</li>
+            </ul>
+            <pre class="brush: bash">
+      django-admin startapp homepage
+
+      .(static)       &lt;- based on root dir, all site structure are placed here
+      └── hoamepage/  &lt;- create folder for your app
+          ├── css/
+          │	├─ style.css
+          │	└─ ...
+          ├── fonts/
+          │	├─ icomoon/
+          │	└─ ...
+          ├── images/
+          │	└─ you_are_fㄩㄈking_handsome.jpg
+          ├── js/
+          │	├─ main.js
+          │	└─ ...
+          └── sass/
+           	└─ ...
+  </pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Front-end
+    <ul>
+      <li>Basically, when we download <a href="https://freehtml5.co/profile-free-html5-bootstrap-template-for-personal-and-vcard-resume-websites/">a fancy template</a>, that will contain a <code class="highlighter-rouge">.html</code> file (may be named <code class="highlighter-rouge">index.html</code>, <code class="highlighter-rouge">home.html</code>, <code class="highlighter-rouge">page.html</code> whatever, I will use homepage.html here) which is the page file going to show on your app.</li>
+      <li>Need to do is populating the whole pack into our Django environment
+        <ul>
+          <li>create <code class="highlighter-rouge">static/</code> and <code class="highlighter-rouge">template/</code> folders under root path(UnchainedDjango)
+            <ul>
+              <li>create <code class="highlighter-rouge">homepage/</code> under <code class="highlighter-rouge">static/</code> and place template package here</li>
+              <li>place my <code class="highlighter-rouge">homepage.html</code> file at <code class="highlighter-rouge">template/</code></li>
+            </ul>
+          </li>
+          <li>add a tag in the <code class="highlighter-rouge">homepage.html</code> to load and refer <code class="highlighter-rouge">static/</code></li>
+          <li>change all the src path in tag and correct to <code class="highlighter-rouge">static/</code></li>
+          <li>It’s cumbersome and time-spent to change all path and src, so literally troubleshoot it from the error messages…</li>
+        </ul>
+      </li>
+      <li>Add in UnchiainedDjango/urls.py
+        <ul>
+          <li>import html file:<br />
+  <code class="highlighter-rouge">from homepage.views import homepage</code><br />
+  <code class="highlighter-rouge">urlpatterns = [ ..., url(r'^$', homepage),]</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Preference: <a href="https://docs.djangoproject.com/en/3.0/howto/static-files/"><strong>Managing static files (e.g. images, JavaScript, CSS)</strong></a></p>
+  </li>
+  <li>Heroku deploy
+    <ul>
+      <li><strong>prerequisites</strong>:
+        <ul>
+          <li>knowladge of Git version control</li>
+          <li>Heroku <a href="https://signup.heroku.com"><strong>sign-up</strong></a> and <a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install"><strong>install</strong></a></li>
+          <li>install packages: <code class="highlighter-rouge">pip3 install dj-database-url dj-static gunicorn psycopg2</code></li>
+          <li>from test to prod: <code class="highlighter-rouge">DEBUG=False</code></li>
+          <li>create three files:
+            <ul>
+              <li><strong>Procfile</strong>
+                <ul>
+                  <li>just create the file named Procfile without any extension</li>
+                  <li>open Procfile and insert following command:
+                    <pre class="brush: bash">web: gunicorn --pythonpath mysite mysite.wsgi --log-file - </pre>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>runtime.txt</strong>
+                <ul>
+                  <li>insert your python version, e.g. mine is 3.6.5
+                    <pre class="brush: bash">python-3.6.5</pre>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>requirements.txt</strong>
+                <ul>
+                  <li>type at root dir
+                    <pre class="brush: bash"> pip3 freeze &gt; requirements.txt</pre>
+                  </li>
+                  <li>then open “requirements.txt” and insert this package in the file
+                    <pre class="brush: bash">psycopg2</pre>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>modify wsgi.py
+            <pre class="python">
+      import os
+      from django.core.wsgi import get_wsgi_application
+      from dj_static import Cling
+      os.environ.setdefault("DJANGO_SETTINGS_MODULE", "UnchainedDjango.settings")
+      application = Cling(get_wsgi_application())
+  </pre>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Creat Heroku remote</strong>:
+        <ul>
+          <li><code class="highlighter-rouge">git init</code>: <strong>heroku use git</strong>, thus git control is needed for this project</li>
+          <li><code class="highlighter-rouge">heroku login</code>: login your account</li>
+          <li><code class="highlighter-rouge">heroku create your_app_name</code>: create a new heroku app
+            <ul>
+              <li>for example: <code class="highlighter-rouge">heroku create UnchainedDjango</code></li>
+              <li>Otherwise, <code class="highlighter-rouge">heroku create</code> will automatically assign a app-name for you like <code class="highlighter-rouge">Glacier-Grag-12345</code></li>
+              <li>But, <code class="highlighter-rouge">git remote rename heroku another-name</code> can rename your app</li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">git remote -v</code>: confirm the remote has been set</li>
+          <li><code class="highlighter-rouge">git push heroku master</code>: deploy code</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Preference: <a href="https://devcenter.heroku.com/categories/deploying-with-git"><strong>Deploying with Git</strong></a></p>
+  </li>
+</ol>
+
+<p><strong><em>update date: 2020-04-28</em></strong></p>
+
+:ET

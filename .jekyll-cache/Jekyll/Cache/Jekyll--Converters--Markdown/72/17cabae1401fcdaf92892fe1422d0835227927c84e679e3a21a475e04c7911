@@ -1,7 +1,0 @@
-I"Ö<h1 id="88-merge-sorted-arrays-easy">#88 Merge Sorted Arrays (Easy)</h1>
-<ul>
-  <li><strong>Description</strong>: Given two sorted integer arrays <script type="math/tex">nums1</script> and <script type="math/tex">nums2</script>, merge <script type="math/tex">nums2</script> into <script type="math/tex">nums1</script> as one sorted array. <br />
-The number of elements initialized in <script type="math/tex">nums1</script> and <script type="math/tex">nums2</script> are m and n respectively.
-You may assume that <script type="math/tex">nums1</script> has enough space (size that is greater or equal to <script type="math/tex">m + n</script>) to hold additional elements from <script type="math/tex">nums2</script>.</li>
-</ul>
-:ET

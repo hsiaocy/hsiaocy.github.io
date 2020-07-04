@@ -1,9 +1,0 @@
-I"_<ul>
-  <li><strong>Title</strong>: #122 Best Time to Buy and Sell Stock II</li>
-  <li><strong>Diffculity</strong>: Easy</li>
-  <li><strong>Description</strong>: Say you have an array for which the ith element is the price of a given stock on day <script type="math/tex">i</script>.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).\</li>
-  <li><strong>Notes</strong>: 
-You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</li>
-</ul>
-:ET

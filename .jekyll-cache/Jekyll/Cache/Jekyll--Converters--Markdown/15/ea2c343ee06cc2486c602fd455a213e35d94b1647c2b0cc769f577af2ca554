@@ -1,0 +1,43 @@
+I"q<h1 id="136-single-number-">#136 Single Number <img src="https://img.shields.io/badge/Easy-Leetcode-green.svg" alt="Leetcode" /></h1>
+
+<ul>
+  <li><strong>Title</strong>: #136 Single Number</li>
+  <li><strong>Diffculity</strong>: Easy</li>
+  <li><strong>Description</strong>: Given a non-empty array of integers, every element appears twice except for one. Find that single one.\</li>
+  <li>
+    <p><strong>Notes</strong>: 
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
+  </li>
+  <li><strong>Explanation</strong>: 最佳方法：利用bit manipulation(XOR)。</li>
+</ul>
+
+<p>Solution1:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">singleNumber</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="nl">n:</span> <span class="n">nums</span><span class="o">)</span>
+            <span class="n">r</span> <span class="o">^=</span> <span class="n">n</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">r</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<ul>
+  <li>Time&amp;Space Complexity: <script type="math/tex">O(n), O(1)</script></li>
+</ul>
+
+<p>Solution2:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">singleNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">hash_set</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">hash_set</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">hash_set</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">hash_set</span><span class="o">.</span><span class="n">popitem</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li>Time&amp;Space Complexity: <script type="math/tex">O(n), O(n)</script>
+空間複雜度因<script type="math/tex">hash_set而呈線性</script></li>
+</ul>
+:ET

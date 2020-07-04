@@ -1,9 +1,0 @@
-I"Æ<ul>
-  <li><strong>Title</strong>: #189 Rotate array</li>
-  <li><strong>Diffculity</strong>: Easy</li>
-  <li><strong>Description</strong>: Given an array, rotate the array to the right by k steps, where k is non-negative.</li>
-  <li><strong>Notes</strong>: 
-Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
-Could you do it in-place with <script type="math/tex">O(1)</script> extra space?</li>
-</ul>
-:ET
