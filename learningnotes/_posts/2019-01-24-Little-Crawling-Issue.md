@@ -9,6 +9,7 @@ categories: notes
 author: chunyi_hsiao
 tags: [Crawling, Python]
 share: true
+
 ---
 
 Today I probably did the rehearsal for my end-term defense (still to tired to believe this shit through). And EVENTUALLY I can start to study and to build the quantitative trading and system. But, after knowing a bit of this work, I convince myself and start the big shit from now on. 

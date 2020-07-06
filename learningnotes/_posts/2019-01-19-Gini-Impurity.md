@@ -9,6 +9,7 @@ categories: notes
 author: chunyi_hsiao
 tags: [Decision Tree, Gini Impurity Index]
 share: true
+
 ---
 
 Directly get into the topic, about the *Gini Impurity Index (Gini)*.
