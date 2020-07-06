@@ -12,7 +12,10 @@ share: true
 
 ---
 
+This is in regard with a decision tree.
+
 Directly get into the topic, about the *Gini Impurity Index (Gini)*.
+
 
 ![Diagram](/../images/fig_RF_1.jpg){:width="480"}  
 *The illustration of Random Forest*

@@ -9,7 +9,6 @@ categories: notes
 author: chunyi_hsiao
 tags: [Statistics, Probability Models]
 share: true
-
 ---
 
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>

@@ -9,10 +9,12 @@ categories: notes
 author: chunyi_hsiao
 tags: [Crawling, Python]
 share: true
-
 ---
 
+This is in regard with the data crawling.
+
 Today I probably did the rehearsal for my end-term defense (still to tired to believe this shit through). And EVENTUALLY I can start to study and to build the quantitative trading and system. But, after knowing a bit of this work, I convince myself and start the big shit from now on. 
+
 
 Thereby the first try is to prepare(crawling) the data for the traiiiiiiiiiiiiiiiiiiiiining, yup it is a long way to run.
 
