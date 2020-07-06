@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: Bayes.jpeg
+  teaser: SQLxPython.jpeg
 
 layout: article
 title: SQL Backup
