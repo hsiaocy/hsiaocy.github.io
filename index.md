@@ -7,7 +7,7 @@ permalink: /
 
 <h1>Hello there!</h1>
 <h4>Here's my bookshelf where I pile my takeaway and notes up.</h4>
-To meet such poistions so preparing some skills to followup.
-<li><strong>SW engineer</strong> with LeetCodes </li>
-<li><strong>Data scientist</strong> with Kaggle notebooks </li>
-<li><strong>ML/DL engineer</strong> with Statistics&Probability, Modeling in Python</li>
+Following topics I'm concerning the most:
+
+- Programming COncept: [LeetCode](https://hsiaocy.github.io/leetcodes/)
+- Data ENgineering: [LarningNotes](https://hsiaocy.github.io/learningnotes/) & [Kaggle](https://hsiaocy.github.io/kagglenotes/)
