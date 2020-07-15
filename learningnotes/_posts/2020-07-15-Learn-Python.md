@@ -1,6 +1,6 @@
 ---
 image:
-  teaser: Python.jpeg
+  teaser: IsPython.jpeg
 
 layout: article
 title: Learn Python
